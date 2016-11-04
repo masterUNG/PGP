@@ -14,7 +14,7 @@
             android:layout_width="112dp"
             android:layout_height="115dp"
             app:srcCompat="@drawable/bird48"
-            android:id="@+id/imageView"
+            android:id="@+id/imvFarmer"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="5dp" />

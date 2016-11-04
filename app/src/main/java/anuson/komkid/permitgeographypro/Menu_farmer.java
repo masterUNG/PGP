@@ -36,7 +36,10 @@ public class Menu_farmer extends TabActivity {
 
         tab1.setIndicator("หน้าแรก");
         //tab1.setIndicator("",getResources().getDrawable(R.drawable.));
-        tab1.setContent(new Intent(this, Menu_farmer_1.class));
+
+        Intent intent = new Intent(Menu_farmer.this, Menu_farmer_1.class);
+        intent.putExtra("Login", userLoginStrings);
+        tab1.setContent(intent);
 
         tab2.setIndicator("ลงประกาศ");
         //tab2.setIndicator("",getResources().getDrawable(R.mipmap.ic_launcher));
