@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
@@ -21,6 +22,7 @@ public class Menu_farmer_1 extends FragmentActivity {
     //Explicit
     private ImageView imageView;
     private String[] userLoginStrings;
+    private TextView gardenNameTextView, userNameTextView, addressTextView;
 
 
     final Context context = this;
@@ -37,6 +39,9 @@ public class Menu_farmer_1 extends FragmentActivity {
 
         //Bind Widget
         imageView = (ImageView) findViewById(R.id.imvFarmer);
+        gardenNameTextView = (TextView) findViewById(R.id.textView8);
+        userNameTextView = (TextView) findViewById(R.id.textView9);
+        addressTextView = (TextView) findViewById(R.id.textView10);
 
         //Get Value from Intent
         userLoginStrings = getIntent().getStringArrayExtra("Login");
@@ -52,6 +57,11 @@ public class Menu_farmer_1 extends FragmentActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        //Show Text
+        gardenNameTextView.setText(userLoginStrings[7]);
+        userNameTextView.setText("ชื่อ : " + userLoginStrings[3]);
+        addressTextView.setText("ที่อยู่ : " + userLoginStrings[4]);
 
         //สไลท์ภาพ
         adapter = new MyPageAdapter(getSupportFragmentManager());
